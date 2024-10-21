@@ -1,4 +1,5 @@
 from numpy import *
+import math
 
 def load_data(file_name):
     data_set = []
@@ -56,7 +57,7 @@ for i in range(len(testSet)):
 
 print("\nPredyktowane i rzeczywiste wartości:")
 for predicted, actual in zip(predictions, actuals):
-    print(f"Predyktowana: {predicted}, Rzeczywista: {actual}")
+    print(f"Predyktowana: {math.ceil(predicted)}, Rzeczywista: {math.ceil(actual)}")
     
 accuracyRate = 1 - (errorCount / numTestVec)
 print(f"\nDokładność modelu: {accuracyRate * 100:.2f}%")   

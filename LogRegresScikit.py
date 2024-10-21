@@ -1,4 +1,5 @@
 from numpy import *
+import math
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
@@ -23,7 +24,7 @@ test_predictions = model.predict(testSet)
 
 print("\nPredyktowane i rzeczywiste wartości:")
 for predicted, actual in zip(test_predictions, testLabels):
-    print(f"Predyktowana: {predicted}, Rzeczywista: {actual}")
+    print(f"Predyktowana: {math.ceil(predicted)}, Rzeczywista: {math.ceil(actual)}")
 
 accuracy = accuracy_score(testLabels, test_predictions)
 print(f"\nDokładność modelu scikit-learn: {accuracy * 100:.2f}%")
