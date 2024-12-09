@@ -1,46 +1,45 @@
+# Klasyfikacja Sentymentu na Twitterze
 
-# Twitter Sentiment Classification
+Ten projekt implementuje model głębokiego uczenia do klasyfikacji sentymentu tweetów, wykorzystując podejście oparte na LSTM. Notebook przetwarza surowe dane tekstowe, trenuje model i ocenia jego wydajność.
 
-This project implements a deep learning model for classifying the sentiment of tweets using an LSTM-based approach. The notebook processes raw textual data, trains a model, and evaluates its performance.
+## Przebieg Projektu
 
-## Project Workflow
+1. **Importowanie Wymaganych Bibliotek**
+   - Projekt wykorzystuje biblioteki Python, takie jak TensorFlow, datasets, numpy, pandas i matplotlib.
 
-1. **Importing Required Libraries**
-   - The project utilizes Python libraries such as TensorFlow, datasets, numpy, pandas, and matplotlib.
+2. **Przygotowanie Danych**
+   - Pobiera zestawy danych do trenowania i testowania z określonego URL.
+   - Dzieli dane na zbiory: treningowy, walidacyjny i testowy.
+   - Zapisuje przetworzone dane w formacie JSONL do dalszego wykorzystania.
 
-2. **Data Preparation**
-   - Downloads datasets for training and testing from a specified URL.
-   - Splits the data into training, validation, and test sets.
-   - Saves processed data in JSONL format for further use.
+3. **Budowa Modelu**
+   - Implementuje model sekwencyjny LSTM z warstwami embedding, LSTM i dense.
+   - Optymalizuje model za pomocą optymalizatora Adam.
 
-3. **Model Design**
-   - Implements a sequential LSTM model with embedding, LSTM, and dense layers.
-   - Optimizes the model using the Adam optimizer.
+4. **Trenowanie i Ewaluacja**
+   - Trenuje model na przygotowanym zbiorze danych.
+   - Ocenia wydajność za pomocą takich metryk jak dokładność (accuracy).
 
-4. **Training and Evaluation**
-   - Trains the model on the prepared dataset.
-   - Evaluates the performance using metrics such as accuracy.
+5. **Wizualizacja**
+   - Zawiera wykresy ilustrujące metryki, takie jak strata i dokładność w czasie epok treningowych.
 
-5. **Visualization**
-   - Includes plots to visualize metrics like loss and accuracy over training epochs.
+## Wyniki
+- Notebook przedstawia wnioski dotyczące wydajności modelu na danych testowych oraz wizualizuje postęp podczas treningu.
 
-## Results
-- The notebook provides insights into the model's performance on test data and visualizes training progress.
-
-## Requirements
+## Wymagania
 - Python 3.x
-- Libraries: TensorFlow, datasets, numpy, pandas, matplotlib
+- Biblioteki: TensorFlow, datasets, numpy, pandas, matplotlib
 
-## Usage
-1. Clone the repository and navigate to the project directory.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run the notebook in Jupyter or any compatible environment.
+## Użycie
+1. Sklonuj repozytorium i przejdź do katalogu projektu.
+2. Zainstaluj wymagane zależności, używając polecenia `pip install -r requirements.txt`.
+3. Uruchom notebook w Jupyter lub innym kompatybilnym środowisku.
 
-## File Descriptions
-- **TwitterSentimentClassification.ipynb**: Main notebook containing code, explanations, and results.
-- **Processed JSONL Files**: Created during data preparation for training and testing.
+## Opis Plików
+- **TwitterSentimentClassification.ipynb**: Główny notebook zawierający kod, objaśnienia i wyniki.
+- **Przetworzone Pliki JSONL**: Tworzone podczas przygotowania danych do treningu i testowania.
 
-## Acknowledgments
-- Data Source: [GitHub Repository](https://github.com/cblancac/SentimentAnalysisBert)
+## Podziękowania
+- Źródło danych: [GitHub Repository](https://github.com/cblancac/SentimentAnalysisBert)
 
 ---
