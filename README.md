@@ -44,42 +44,40 @@ Ten projekt ma na celu analizę sentymentów na podstawie tweetów z Twittera. M
 
 ![Wykres dokładności](images/Chart.png "Wykres dokładności modelu")
 
-Mimo wrostu dokładności przy uczeniu na danych treningowych dokładność walidacyjna po pewnym czasie maleje.
+- Mimo wrostu dokładności przy uczeniu na danych treningowych dokładność walidacyjna po pewnym czasie maleje.
 
 **Dokładność testowa:**  
 
-1938/1938 ━━━━━━━━━━━━━━━━━━━━ 26s 13ms/step  
 accuracy: 0.7902 - loss: 0.4486  
 Dokładność na zbiorze testowym: 0.79
 
 **Wyświetlamy przykładowe predykcje i rzeczywiste etykiety:**  
 
 Przykładowe predykcje:  
-1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 47ms/step  
 
- Tweet: @justineville ...yeahhh. i'm 39 tweets from 1,600!  
- Predykcja: Negatywna, Rzeczywista etykieta: Negatywna
+ - Tweet: @justineville ...yeahhh. i'm 39 tweets from 1,600!  
+   Predykcja: Negatywna, Rzeczywista etykieta: Negatywna
 
- Tweet: @ApplesnFeathers aww. Poor baby! On your only REAL day off.  
- Predykcja: Pozytywna, Rzeczywista etykieta: Pozytywna
+ - Tweet: @ApplesnFeathers aww. Poor baby! On your only REAL day off.  
+   Predykcja: Pozytywna, Rzeczywista etykieta: Pozytywna
 
- Tweet: @joeymcintyre With my refunded $225 (Australian ticket price) I bought me a hot pair of brown boots  Woulda rathered seeing U any day  
- Predykcja: Pozytywna, Rzeczywista etykieta: Negatywna
+ - Tweet: @joeymcintyre With my refunded $225 (Australian ticket price) I bought me a hot pair of brown boots  Woulda rathered seeing U any day  
+   Predykcja: Pozytywna, Rzeczywista etykieta: Negatywna
 
- Tweet: It's fine. Today sucks just because me those things. i dunno if i can see you 
- Predykcja: Pozytywna, Rzeczywista etykieta: Pozytywna
+ - Tweet: It's fine. Today sucks just because me those things. i dunno if i can see you 
+   Predykcja: Pozytywna, Rzeczywista etykieta: Pozytywna
 
- Tweet: Im just chilling on psp and stuff, but sitting on pc now, also watching wimledon, getting ready for holiday @WhiteTigerNora Ahh poor you  
- Predykcja: Negatywna, Rzeczywista etykieta: Negatywna
+ - Tweet: Im just chilling on psp and stuff, but sitting on pc now, also watching wimledon, getting ready for holiday @WhiteTigerNora Ahh poor you  
+   Predykcja: Negatywna, Rzeczywista etykieta: Negatywna
 
- Tweet: @lisarinna very sad Lisa...she is freeeeeeeeeeee an Angel in Heaven xoxo  
- Predykcja: Negatywna, Rzeczywista etykieta: Negatywna
+ - Tweet: @lisarinna very sad Lisa...she is freeeeeeeeeeee an Angel in Heaven xoxo  
+   Predykcja: Negatywna, Rzeczywista etykieta: Negatywna
 
- Tweet: Comfortablity has won out  
- Predykcja: Negatywna, Rzeczywista etykieta: Pozytywna
+ - Tweet: Comfortablity has won out  
+   Predykcja: Negatywna, Rzeczywista etykieta: Pozytywna
 
- Tweet: blaaah. I don't feel good aagain  
- Predykcja: Negatywna, Rzeczywista etykieta: Pozytywna
+ - Tweet: blaaah. I don't feel good aagain  
+   Predykcja: Negatywna, Rzeczywista etykieta: Pozytywna
 
 **W projekcie przeprowadzono także unit testy, które sprawdzają różne etapy przetwarzania danych oraz trenowania modelu:**
 
