@@ -64,7 +64,7 @@ Przykładowe predykcje:
  - Tweet: @joeymcintyre With my refunded $225 (Australian ticket price) I bought me a hot pair of brown boots  Woulda rathered seeing U any day  
    Predykcja: Pozytywna, Rzeczywista etykieta: Negatywna
 
- - Tweet: It's fine. Today sucks just because me those things. i dunno if i can see you 
+ - Tweet: It's fine. Today sucks just because me those things. i dunno if i can see you  
    Predykcja: Pozytywna, Rzeczywista etykieta: Pozytywna
 
  - Tweet: Im just chilling on psp and stuff, but sitting on pc now, also watching wimledon, getting ready for holiday @WhiteTigerNora Ahh poor you  
