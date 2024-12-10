@@ -34,22 +34,26 @@ Ten projekt ma na celu analizę sentymentów na podstawie tweetów z Twittera. M
    Na koniec, po zakończeniu analizy, pliki JSONL utworzone podczas przetwarzania danych są usuwane.
 
 ## Wyniki
-- **Dokładność treningowa i walidacyjna podczas trenowania:**  
+**Dokładność treningowa i walidacyjna podczas trenowania:**  
+
 ![Dokładność treningowa i walidacyjna](images/Epochs.png "Dokładność modelu na różnych etapach treningu")
 
-Przy występowaniu większej liczby epok w modelu występuje przeuczenie. Z tego powodu zastosowana została funkcja EarlyStopping, która przywraca najlepszą wagę modelu podczas jego uczenia.
+- Przy występowaniu większej liczby epok w modelu występuje przeuczenie. Z tego powodu zastosowana została funkcja EarlyStopping, która przywraca najlepszą wagę modelu podczas jego uczenia.
 
-- **Wykres dokładności:**  
+**Wykres dokładności:**  
+
 ![Wykres dokładności](images/Chart.png "Wykres dokładności modelu")
 
 Mimo wrostu dokładności przy uczeniu na danych treningowych dokładność walidacyjna po pewnym czasie maleje.
 
-- **Dokładność testowa:**  
+**Dokładność testowa:**  
+
 1938/1938 ━━━━━━━━━━━━━━━━━━━━ 26s 13ms/step  
 accuracy: 0.7902 - loss: 0.4486  
 Dokładność na zbiorze testowym: 0.79
 
-- **Wyświetlamy przykładowe predykcje i rzeczywiste etykiety:**
+**Wyświetlamy przykładowe predykcje i rzeczywiste etykiety:**  
+
 Przykładowe predykcje:  
 1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 47ms/step  
 
