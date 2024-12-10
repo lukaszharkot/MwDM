@@ -1,4 +1,4 @@
-# Analiza Sentymentu na Twitterze - Projekt z użyciem LSTM
+# Analiza Sentymentu na Twitterze
 
 ## Opis
 
