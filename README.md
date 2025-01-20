@@ -111,7 +111,7 @@ W ramach rozszerzenia projektu, zastosowaliśmy OpenAI API do analizy sentymentu
 **Wykres dokładności OpenAI z uwzględnieniem batchy:**
 ![Wykres Dokładności OpenAI](images/DokladnoscOpenAI.png "Dokładność OpenAI z uwzględnieniem batchy")
 
-**Ogólna dokładność OpenAI API:** 0.70
+**Ogólna dokładność OpenAI API:** 0.70  
 Model LSTM, uczony przez nas wcześniej, miał dokładnośc na poziomie 0.79 (Większy zbiór danych).
 
 ## Wymagania
