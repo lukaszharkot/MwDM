@@ -79,7 +79,15 @@ Przykładowe predykcje:
  - Tweet: blaaah. I don't feel good aagain  
    Predykcja: Negatywna, Rzeczywista etykieta: Pozytywna
 
-### Integracja z OpenAI API do analizy sentymentu
+**W projekcie przeprowadzono także unit testy, które sprawdzają różne etapy przetwarzania danych oraz trenowania modelu:**
+
+1. Tokenizacja i dopełnianie sekwencji: Testy sprawdzają, czy sekwencje mają odpowiedni kształt i długość oraz czy każdy token jest liczbą całkowitą.
+2. Podział danych: Testy weryfikują poprawność podziału danych na zbiory treningowy i walidacyjny.
+3. Struktura plików JSONL: Testy sprawdzają, czy pliki JSONL są tworzone z odpowiednią strukturą.
+
+Wszystkie testy przeszły pomyślnie, co potwierdza poprawność przetwarzania danych oraz trenowania modelu.
+
+## Integracja z OpenAI API do analizy sentymentu
 
 W ramach rozszerzenia projektu, zastosowaliśmy OpenAI API do analizy sentymentu na podstawie tweetów. Dzięki temu, przy użyciu zaawansowanych modeli językowych, takich jak GPT-4o-mini, możemy przeprowadzać klasyfikację sentymentu w tekstach, przydzielając im etykiety "pozytywne" lub "negatywne" na podstawie treści tweetów.
 
@@ -97,23 +105,14 @@ W ramach rozszerzenia projektu, zastosowaliśmy OpenAI API do analizy sentymentu
 
 4. **Porównanie z wynikami modelu LSTM**: Po uzyskaniu wyników analizy sentymentu z OpenAI, porównujemy je z wynikami uzyskanymi z modelu LSTM. Dokładność modelu OpenAI jest obliczana na podstawie zbioru testowego i porównywana z dokładnością uzyskaną przez model LSTM.
 
-Wykres Ground Truth:
+**Wykres Ground Truth:**
 ![Wykres Ground Truth OpenAI](images/GroundTruthOpenAI.png "Wykres Ground Truth modelu gpt-4o-mini")
 
-Wykres dokładności OpenAI z uwzględnieniem batchy:
+**Wykres dokładności OpenAI z uwzględnieniem batchy:**
 ![Wykres Dokładności OpenAI](images/DokladnoscOpenAI.png "Dokładność OpenAI z uwzględnieniem batchy")
 
-Ogólna dokładność OpenAI API: 0.70
+**Ogólna dokładność OpenAI API:** 0.70
 Model LSTM, uczony przez nas wcześniej, miał dokładnośc na poziomie 0.79 (Większy zbiór danych).
-
-**W projekcie przeprowadzono także unit testy, które sprawdzają różne etapy przetwarzania danych oraz trenowania modelu:**
-
-1. Tokenizacja i dopełnianie sekwencji: Testy sprawdzają, czy sekwencje mają odpowiedni kształt i długość oraz czy każdy token jest liczbą całkowitą.
-2. Podział danych: Testy weryfikują poprawność podziału danych na zbiory treningowy i walidacyjny.
-3. Struktura plików JSONL: Testy sprawdzają, czy pliki JSONL są tworzone z odpowiednią strukturą.
-
-Wszystkie testy przeszły pomyślnie, co potwierdza poprawność przetwarzania danych oraz trenowania modelu.
-
 
 ## Wymagania
 
