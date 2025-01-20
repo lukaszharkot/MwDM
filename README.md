@@ -122,3 +122,4 @@ Model LSTM, uczony przez nas wcześniej, miał dokładnośc na poziomie 0.79 (Wi
 - Pandas
 - Matplotlib
 - Datasets (Hugging Face)
+- OpenAI (wymaga klucza API, który można uzyskać na stronie [OpenAI](https://openai.com/)).  
