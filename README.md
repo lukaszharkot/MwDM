@@ -79,6 +79,33 @@ Przykładowe predykcje:
  - Tweet: blaaah. I don't feel good aagain  
    Predykcja: Negatywna, Rzeczywista etykieta: Pozytywna
 
+### Integracja z OpenAI API do analizy sentymentu
+
+W ramach rozszerzenia projektu, zastosowaliśmy OpenAI API do analizy sentymentu na podstawie tweetów. Dzięki temu, przy użyciu zaawansowanych modeli językowych, takich jak GPT-4o-mini, możemy przeprowadzać klasyfikację sentymentu w tekstach, przydzielając im etykiety "pozytywne" lub "negatywne" na podstawie treści tweetów.
+
+#### Cele integracji:
+- Wykorzystanie OpenAI API do klasyfikacji sentymentu tweetów.
+- Porównanie wyników klasyfikacji między modelem LSTM a modelem OpenAI.
+- Użycie OpenAI API do uzyskania wyników na większej liczbie tweetów.
+
+#### Proces integracji:
+1. **Pobieranie tweetów**: Tweetów używanych w projekcie nie przetwarzamy wyłącznie za pomocą klasycznego modelu LSTM, ale także za pomocą OpenAI API do klasyfikacji ich sentymentu. Zdecydowaliśmy się przeprowadzić klasyfikację za pomocą OpenAI API dobierając losową próbę - 4500 próbek.
+   
+2. **Wykorzystanie OpenAI API**: OpenAI API umożliwia wysyłanie tweetów w formie tekstów do udostępnionych modeli, którę dokonują klasyfikacji na podstawie zawartości każdego z tych tekstów. My zdecydowaliśmy się na model gpt-4o-mini ze względu na jego budżetowość i szybkośc działania.
+
+3. **Zastosowanie przetwarzania w partiach**: Aby efektywnie wykorzystać OpenAI, zastosowaliśmy przetwarzanie w partiach (batch processing). Dzięki temu możliwe jest jednoczesne przetwarzanie wielu tweetów, co poprawia wydajność i skraca czas oczekiwania na odpowiedzi. 'Batche', w naszym przypadku, składają się z 50 tweetów. Wysyłamy więc 90 requestów. Zauważyliśmy, że gpt-4o-mini lepiej radzi sobie z mniejszymi partiami - stąd ta liczba.
+
+4. **Porównanie z wynikami modelu LSTM**: Po uzyskaniu wyników analizy sentymentu z OpenAI, porównujemy je z wynikami uzyskanymi z modelu LSTM. Dokładność modelu OpenAI jest obliczana na podstawie zbioru testowego i porównywana z dokładnością uzyskaną przez model LSTM.
+
+Wykres Ground Truth:
+![Wykres Ground Truth OpenAI](images/GroundTruthOpenAI.png "Wykres Ground Truth modelu gpt-4o-mini")
+
+Wykres dokładności OpenAI z uwzględnieniem batchy:
+![Wykres Dokładności OpenAI](images/DokladnoscOpenAI.png "Dokładność OpenAI z uwzględnieniem batchy")
+
+Ogólna dokładność OpenAI API: 0.70
+Model LSTM, uczony przez nas wcześniej, miał dokładnośc na poziomie 0.79 (Większy zbiór danych).
+
 **W projekcie przeprowadzono także unit testy, które sprawdzają różne etapy przetwarzania danych oraz trenowania modelu:**
 
 1. Tokenizacja i dopełnianie sekwencji: Testy sprawdzają, czy sekwencje mają odpowiedni kształt i długość oraz czy każdy token jest liczbą całkowitą.
